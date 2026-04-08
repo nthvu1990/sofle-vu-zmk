@@ -57,12 +57,12 @@ layers:
   - SPACE
   - SPACE
   - {t: raise, h: toggle}
-  - '&td_rl_l3'
-  - RCTRL
-  - RALT
+  - LEFT WIN
+  - '['
+  - ']'
   - RGUI
   lower:
-  - '&td_btr'
+  - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -105,11 +105,11 @@ layers:
   - NEXT
   - '#'
   - PLAY PAUSE
-  - {t: ▽, type: trans}
-  - RGB SAD
   - '1'
   - '2'
   - '3'
+  - '2'
+  - ENTER
   - KP ENTER
   - RGB SPD
   - {t: ▽, type: trans}
@@ -117,10 +117,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: gaeilge, h: toggle}
   - '0'
   - '0'
-  - '0'
+  - .
   - .
   raise:
   - '&studio_unlock'
