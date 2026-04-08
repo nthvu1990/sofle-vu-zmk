@@ -673,6 +673,29 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        captureScreen: captureScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "CAPTURESCREEN";
+        };
+
+        captureScreen1: captureScreen1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp LEFT_SHIFT &kp S>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "CAPTURESCREEN1";
+        };
     };
 };
 
