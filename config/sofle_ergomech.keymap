@@ -27,55 +27,34 @@
         };
     };
 
-    keymap {
+keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
-&kp TAB &kp Q  &kp W  &kp E  &kp R  &kp T       &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC
-&kp CAPS &kp A &kp S  &kp D  &kp F  &kp G       &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp V &kp B  &kp C_MUTE &kp C_PP &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-        &kp LGUI &kp LALT &kp LCTRL &mo 1 &kp ENTER &kp SPACE &mo 2 &kp RCTRL &kp RALT &kp RGUI
+                &kp Q   &kp W   &kp E   &kp R   &kp T        &kp Y   &kp U   &kp I   &kp O   &kp P
+                &kp A   &kp S   &kp D   &kp F   &kp G        &kp H   &kp J   &kp K   &kp L   &kp SEMI
+                &kp Z   &kp X   &kp C   &kp V   &kp B        &kp N   &kp M   &kp COMMA &kp DOT &kp SLASH
+                                &mo 1  &kp SPACE &kp ENTER   &kp BSPC &mo 2
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&tab_browser>;
         };
 
         lower_layer {
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
-&kp PSCRN &kp INS &kp UP &kp NO &kp NO &kp NO     &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&kp LEFT &kp DOWN &kp RIGHT &kp NO &kp NO &kp NO  &kp N1 &kp N2 &kp N3 &kp KP_PLUS &kp NO &kp NO
-&kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp N4 &kp N5 &kp N6 &kp KP_ENTER &kp NO &kp NO
-        &trans &trans &trans &trans &trans &trans &trans &kp N0 &kp N0 &kp DOT
+                &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
+                &kp 1    &kp 2    &kp 3    &kp 4    &kp 5         &kp 6     &kp 7    &kp 8    &kp 9    &kp 0
+                &kp GRAVE &kp TILDE &kp LBKT &kp RBKT &kp PIPE    &kp MINUS &kp EQUAL &kp UNDERSCORE &kp PLUS &kp BACKSLASH
+                                &trans &trans &trans     &trans &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
             bindings = <
-&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6     &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5  &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
-&kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET  &kp AMPS &kp ASTERISK &kp LPAR &kp RPAR &kp PIPE &kp BSLH
-&kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp LBKT &kp RBKT &kp COLON &kp SEMI &kp NO &kp NO
-        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &kp ESC  &kp F1 &kp F2 &kp F3 &kp F4        &kp F5 &kp F6 &kp F7 &kp F8 &kp F9
+                &kp TAB  &kp F10 &kp F11 &kp F12 &kp INS    &kp HOME &kp PG_DN &kp PG_UP &kp END &kp DEL
+                &kp CAPS &kp LCTRL &kp LALT &kp LGUI &kp LSFT   &kp RSFT &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                                &trans &trans &trans      &trans &trans
             >;
-
-            sensor-bindings = <&rgb_encoder>, <&inc_dec_kp PG_UP PG_DN>;
-        };
-
-        adjust_layer {
-            bindings = <
-&rgb_ug RGB_TOG &rgb_ug RGB_HUI &rgb_ug RGB_HUD &rgb_ug RGB_SAI &rgb_ug RGB_SAD &rgb_ug RGB_BRI   &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO
-&kp NO &kp NO &kp NO &kp NO &kp NO &kp NO   &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO
-&kp NO &kp NO &kp NO &kp NO &kp NO &kp NO   &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO
-&kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO &kp NO
-        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>, <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
