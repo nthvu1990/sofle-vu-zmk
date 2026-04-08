@@ -294,6 +294,7 @@
                 <&kp LEFT_SHIFT &kp S>,
                 <&macro_release>,
                 <&kp RCTRL>;
+
             label = "CAPTURESCREEN1";
         };
 
@@ -309,6 +310,7 @@
                 <&kp LEFT_SHIFT &kp V>,
                 <&macro_release>,
                 <&kp RCTRL>;
+
             label = "PASTEVALUE";
         };
 
@@ -324,6 +326,7 @@
                 <&kp LEFT>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
+
             label = "SHIFTLEFT";
         };
 
@@ -339,6 +342,7 @@
                 <&kp RIGHT>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
+
             label = "SHIFTRIGHT";
         };
 
@@ -354,6 +358,7 @@
                 <&kp UP_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
+
             label = "SHIFTUP";
         };
 
@@ -369,6 +374,7 @@
                 <&kp DOWN>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
+
             label = "SHIFTDOWN";
         };
 
@@ -384,6 +390,7 @@
                 <&kp LEFT_SHIFT &kp UP_ARROW>,
                 <&macro_release>,
                 <&kp RCTRL>;
+
             label = "CTRLSHIFTUP";
         };
 
@@ -399,6 +406,7 @@
                 <&kp LEFT_SHIFT &kp DOWN_ARROW>,
                 <&macro_release>,
                 <&kp RCTRL>;
+
             label = "CTRLSHIFTDOWN";
         };
 
@@ -414,6 +422,7 @@
                 <&kp LEFT_SHIFT &kp LEFT>,
                 <&macro_release>,
                 <&kp RCTRL>;
+
             label = "CTRLSHIFTLEFT";
         };
 
@@ -429,6 +438,7 @@
                 <&kp LEFT_SHIFT &kp RIGHT>,
                 <&macro_release>,
                 <&kp RCTRL>;
+
             label = "CTRLSHIFTRIGHT";
         };
     };
@@ -455,6 +465,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_BRI>;
+
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
@@ -462,6 +473,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAD>, <&rgb_ug RGB_BRD>;
+
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
@@ -469,6 +481,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUI>, <&rgb_bri_sat_inc>;
+
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
@@ -476,6 +489,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_bri_sat_dec>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -485,6 +499,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RET>, <&kp K_APPLICATION>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -601,12 +616,12 @@
             //                                                               | RGUI |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2     &kp N3    &kp N4  &kp N5     &kp N6     &kp N7  &kp N8        &kp N9            &kp N0             &kp BACKSPACE
-&kp TAB         &kp Q   &kp W      &kp E     &kp R   &kp T      &kp Y      &kp U   &kp I         &kp O             &kp P              &kp DELETE
-&kp LEFT_SHIFT  &kp A   &kp S      &kp D     &kp F   &kp G      &kp H      &kp J   &kp K         &kp L             &kp SEMI           &kp SQT
-&kp RCTRL       &kp Z   &kp X      &kp C     &kp V   &kp B      &kp N      &kp M   &kp COMMA     &kp DOT           &kp SLASH          &kp ENTER
-&kp FSLH        &rscw   &lwin_cad  &kp LALT  &to 1   &kp SPACE  &kp SPACE  &to 2   &kp LEFT_WIN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                                                                &kp RGUI
+&kp ESC         &kp N1        &kp N2       &kp N3           &kp N4  &kp N5     &kp N6     &kp N7  &kp N8        &kp N9            &kp N0             &kp BACKSPACE
+&kp TAB         &kp Q         &kp W        &kp E            &kp R   &kp T      &kp Y      &kp U   &kp I         &kp O             &kp P              &kp DELETE
+&kp LEFT_SHIFT  &kp A         &kp S        &kp D            &kp F   &kp G      &kp H      &kp J   &kp K         &kp L             &kp SEMI           &kp SQT
+&kp RCTRL       &kp Z         &kp X        &kp C            &kp V   &kp B      &kp N      &kp M   &kp COMMA     &kp DOT           &kp SLASH          &kp ENTER
+&kp FSLH        &kp LEFT_ALT  &pasteValue  &captureScreen1  &to 1   &kp SPACE  &kp SPACE  &to 2   &kp LEFT_WIN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                                                                               &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &tab_browser>;
@@ -621,12 +636,12 @@
             //                |      |       |       |      |      |  |      | to 3 |  0  |   0  |   .  |
 
             bindings = <
-&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &rgb_ug RGB_HUI   &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &rgb_ug RGB_EFF
-&rgb_ug RGB_BRI  &kp PSCRN        &kp INS       &kp UP        &kp AT        &kp PRCNT     &rgb_ug RGB_HUD   &kp N7        &kp N8         &kp N9           &kp KP_PLUS   &trans
-&rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &kp LEFT      &kp DOWN      &kp RIGHT     &kp DLLR      &rgb_ug RGB_SAI   &kp N4        &kp N5         &kp N6           &kp KP_PLUS   &rgb_ug RGB_SPI
-&stm             &out OUT_TOG     &trans        &kp C_PREV    &kp C_NEXT    &kp HASH      &kp C_PLAY_PAUSE  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp N2        &kp ENTER
-&kp KP_ENTER     &rgb_ug RGB_SPD  &trans        &trans        &trans        &trans        &trans            &to 3         &kp N0         &kp N0           &kp PERIOD
-                                                                                          &kp DOT
+&kp GRAVE        &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &rgb_ug RGB_HUI   &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &rgb_ug RGB_EFF
+&rgb_ug RGB_BRI  &kp PSCRN        &kp INS       &kp UP        &kp AT        &kp PRCNT   &rgb_ug RGB_HUD   &kp N7        &kp N8         &kp N9           &kp KP_PLUS   &trans
+&rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &kp LEFT      &kp DOWN      &kp RIGHT     &kp DLLR    &rgb_ug RGB_SAI   &kp N4        &kp N5         &kp N6           &kp KP_PLUS   &rgb_ug RGB_SPI
+&stm             &out OUT_TOG     &trans        &kp C_PREV    &kp C_NEXT    &kp HASH    &kp C_PLAY_PAUSE  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp N2        &kp ENTER
+&kp KP_ENTER     &rgb_ug RGB_SPD  &trans        &trans        &trans        &trans      &trans            &to 3         &kp N0         &kp N0           &kp PERIOD
+                                                                                        &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND &inc_dec_kp PG_UP PG_DN>;
@@ -661,10 +676,10 @@
             //               |     |      |      | to 0 |       |  |        |      |       |       |      |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_OFF
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRI
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD
 &trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans  &trans  &trans  &trans
                                                 &trans
             >;
