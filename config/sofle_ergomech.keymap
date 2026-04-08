@@ -1229,11 +1229,11 @@
             //               |GUI† | ALT  | CTRL | LOWER|ENTER‡ |  | SPACE  |RAISE | CTRL  |  ALT  | GUI  |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2     &kp N3    &kp N4  &kp N5     &kp N6     &kp N7  &kp N8     &kp N9     &kp N0     &kp BACKSPACE
-&kp TAB         &kp Q   &kp W      &kp E     &kp R   &kp T      &kp Y      &kp U   &kp I      &kp O      &kp P      &kp DELETE
-&kp LEFT_SHIFT  &kp A   &kp S      &kp D     &kp F   &kp G      &kp H      &kp J   &kp K      &kp L      &kp SEMI   &kp SQT
-&kp RCTRL       &kp Z   &kp X      &kp C     &kp V   &kp B      &kp N      &kp M   &kp COMMA  &kp DOT    &kp SLASH  &kp ENTER
-&kp FSLH        &rscw   &lwin_cad  &kp LALT  &to 1   &kp SPACE  &kp SPACE  &to 2   &td_rl_l3  &kp RCTRL  &kp RALT
+&kp ESC         &kp N1  &kp N2     &kp N3    &kp N4  &kp N5     &kp N6     &kp N7  &kp N8        &kp N9            &kp N0             &kp BACKSPACE
+&kp TAB         &kp Q   &kp W      &kp E     &kp R   &kp T      &kp Y      &kp U   &kp I         &kp O             &kp P              &kp DELETE
+&kp LEFT_SHIFT  &kp A   &kp S      &kp D     &kp F   &kp G      &kp H      &kp J   &kp K         &kp L             &kp SEMI           &kp SQT
+&kp RCTRL       &kp Z   &kp X      &kp C     &kp V   &kp B      &kp N      &kp M   &kp COMMA     &kp DOT           &kp SLASH          &kp ENTER
+&kp FSLH        &rscw   &lwin_cad  &kp LALT  &to 1   &kp SPACE  &kp SPACE  &to 2   &kp LEFT_WIN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
                                                                 &kp RGUI
             >;
 
@@ -1249,11 +1249,11 @@
             //                |      |       |       |      |      |  |      |  0   |  0  |   0  |   .  |
 
             bindings = <
-&td_btr          &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &rgb_ug RGB_HUI   &kp KP_EQUAL  &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_MINUS  &rgb_ug RGB_EFF
-&rgb_ug RGB_BRI  &kp PSCRN        &kp INS       &kp UP        &kp AT        &kp PRCNT     &rgb_ug RGB_HUD   &kp N7        &kp N8           &kp N9           &kp KP_PLUS   &trans
-&rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &kp LEFT      &kp DOWN      &kp RIGHT     &kp DLLR      &rgb_ug RGB_SAI   &kp N4        &kp N5           &kp N6           &kp KP_PLUS   &rgb_ug RGB_SPI
-&stm             &out OUT_TOG     &trans        &kp C_PREV    &kp C_NEXT    &kp HASH      &kp C_PLAY_PAUSE  &trans        &rgb_ug RGB_SAD  &kp N1           &kp N2        &kp N3
-&kp KP_ENTER     &rgb_ug RGB_SPD  &trans        &trans        &trans        &trans        &trans            &trans        &kp N0           &kp N0           &kp N0
+&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &rgb_ug RGB_HUI   &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &rgb_ug RGB_EFF
+&rgb_ug RGB_BRI  &kp PSCRN        &kp INS       &kp UP        &kp AT        &kp PRCNT     &rgb_ug RGB_HUD   &kp N7        &kp N8         &kp N9           &kp KP_PLUS   &trans
+&rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &kp LEFT      &kp DOWN      &kp RIGHT     &kp DLLR      &rgb_ug RGB_SAI   &kp N4        &kp N5         &kp N6           &kp KP_PLUS   &rgb_ug RGB_SPI
+&stm             &out OUT_TOG     &trans        &kp C_PREV    &kp C_NEXT    &kp HASH      &kp C_PLAY_PAUSE  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp N2        &kp ENTER
+&kp KP_ENTER     &rgb_ug RGB_SPD  &trans        &trans        &trans        &trans        &trans            &to 3         &kp N0         &kp N0           &kp PERIOD
                                                                                           &kp DOT
             >;
 
