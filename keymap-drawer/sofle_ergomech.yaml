@@ -50,9 +50,9 @@ layers:
   - /
   - ENTER
   - /
-  - '&rscw'
-  - '&lwin_cad'
-  - LALT
+  - LEFT ALT
+  - '&pasteValue'
+  - '&captureScreen1'
   - {t: lower, h: toggle}
   - SPACE
   - SPACE
@@ -62,12 +62,12 @@ layers:
   - ']'
   - RGUI
   lower:
-  - BT CLR
+  - '`'
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - BT CLR
   - RGB HUI
   - KP EQUAL
   - KP DIVIDE
@@ -195,6 +195,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - RGB ON
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -206,6 +207,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - RGB OFF
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -217,6 +219,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - RGB BRI
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -228,10 +231,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RGB BRD
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
