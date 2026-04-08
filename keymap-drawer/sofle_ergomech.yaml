@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - DEL
+  - BACKSPACE
   - TAB
   - Q
   - W
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - P
-  - BSPC
+  - DELETE
   - '&clcw'
   - A
   - S
@@ -43,20 +43,20 @@ layers:
   - C
   - V
   - B
-  - MUTE
-  - '&close_tab'
   - N
   - M
   - ','
   - .
   - /
+  - ENTER
+  - /
   - '&rscw'
   - '&lwin_cad'
   - LALT
-  - LCTRL
-  - '&td_ll_l3'
-  - {t: RET, s: APPLICATION}
+  - {t: lower, h: toggle}
   - SPACE
+  - SPACE
+  - {t: raise, h: toggle}
   - '&td_rl_l3'
   - RCTRL
   - RALT
