@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -37,73 +32,57 @@
 
 / {
     macros {
-        // System and Power
+
+        // ─── System & Power ───────────────────────────────────────────
 
         tm: tm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp ESC>,
-                <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp ESC>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
         };
 
         cad: cad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LALT &kp DEL>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT &kp DEL>;
+                <&macro_press>,   <&kp LCTRL &kp LALT &kp DEL>,
+                <&macro_release>, <&kp LCTRL &kp LALT &kp DEL>;
         };
 
         slp: slp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp X>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp U &kp S>;
+                <&macro_press>,   <&kp LGUI>,
+                <&macro_tap>,     <&kp X>,
+                <&macro_release>, <&kp LGUI>,
+                <&macro_tap>,     <&kp U &kp S>;
         };
 
         rst: rst {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp X>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp U &kp R>;
+                <&macro_press>,   <&kp LGUI>,
+                <&macro_tap>,     <&kp X>,
+                <&macro_release>, <&kp LGUI>,
+                <&macro_tap>,     <&kp U &kp R>;
         };
 
         off: off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp X>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp U &kp U>;
+                <&macro_press>,   <&kp LGUI>,
+                <&macro_tap>,     <&kp X>,
+                <&macro_release>, <&kp LGUI>,
+                <&macro_tap>,     <&kp U &kp U>;
         };
 
-        // Microphones
+        // ─── Microphone ───────────────────────────────────────────────
 
         teams_mute: teams_mute {
             compatible = "zmk,behavior-macro";
@@ -111,25 +90,18 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_tap>,
-                <&bt BT_SEL 1>,
+                <&macro_tap>,       <&bt BT_SEL 1>,
                 <&macro_wait_time 100>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp N3>,
-                <&macro_release>,
-                <&kp LGUI>,
+                <&macro_press>,     <&kp LGUI>,
+                <&macro_tap>,       <&kp N3>,
+                <&macro_release>,   <&kp LGUI>,
                 <&macro_wait_time 50>,
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp M>,
-                <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&macro_press>,     <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,       <&kp M>,
+                <&macro_release>,   <&kp LCTRL &kp LSHFT>;
         };
 
-        // Browser Controls
+        // ─── Browser Controls ─────────────────────────────────────────
 
         tab_right: tab_right {
             compatible = "zmk,behavior-macro";
@@ -137,12 +109,9 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp TAB>,
+                <&macro_release>, <&kp LCTRL>;
         };
 
         tab_left: tab_left {
@@ -151,12 +120,9 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp TAB>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
         };
 
         close_tab: close_tab {
@@ -165,15 +131,12 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp W>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp W>,
+                <&macro_release>, <&kp LCTRL>;
         };
 
-        // IPA
+        // ─── IPA ──────────────────────────────────────────────────────
 
         schwa: schwa {
             compatible = "zmk,behavior-macro";
@@ -181,15 +144,12 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N9>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N9>,
+                <&macro_release>, <&kp LALT>;
         };
 
-        // Operators
+        // ─── Math Operators ───────────────────────────────────────────
 
         less_equ: less_equ {
             compatible = "zmk,behavior-macro";
@@ -197,12 +157,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N6 &kp KP_N4>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N6 &kp KP_N4>,
+                <&macro_release>, <&kp LALT>;
         };
 
         gtr_equ: gtr_equ {
@@ -211,12 +168,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N6 &kp KP_N5>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N6 &kp KP_N5>,
+                <&macro_release>, <&kp LALT>;
         };
 
         not_equ: not_equ {
@@ -225,12 +179,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N6 &kp KP_N0>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N6 &kp KP_N0>,
+                <&macro_release>, <&kp LALT>;
         };
 
         alm_equ: alm_equ {
@@ -239,12 +190,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N4 &kp KP_N8>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N2 &kp KP_N2 &kp KP_N4 &kp KP_N8>,
+                <&macro_release>, <&kp LALT>;
         };
 
         dbl_left: dbl_left {
@@ -253,12 +201,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N0 &kp KP_N0 &kp A &kp B>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N0 &kp KP_N0 &kp A &kp B>,
+                <&macro_release>, <&kp LALT>;
         };
 
         dbl_right: dbl_right {
@@ -267,13 +212,12 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_PLUS &kp KP_N0 &kp KP_N0 &kp B &kp B>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp KP_PLUS &kp KP_N0 &kp KP_N0 &kp B &kp B>,
+                <&macro_release>, <&kp LALT>;
         };
+
+        // ─── Screen / Clipboard ───────────────────────────────────────
 
         captureScreen: captureScreen {
             compatible = "zmk,behavior-macro";
@@ -288,13 +232,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_SHIFT &kp S>,
-                <&macro_release>,
-                <&kp RCTRL>;
-
+                <&macro_press>,   <&kp RCTRL>,
+                <&macro_tap>,     <&kp LEFT_SHIFT &kp S>,
+                <&macro_release>, <&kp RCTRL>;
             label = "CAPTURESCREEN1";
         };
 
@@ -304,15 +244,13 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_SHIFT &kp V>,
-                <&macro_release>,
-                <&kp RCTRL>;
-
+                <&macro_press>,   <&kp RCTRL>,
+                <&macro_tap>,     <&kp LEFT_SHIFT &kp V>,
+                <&macro_release>, <&kp RCTRL>;
             label = "PASTEVALUE";
         };
+
+        // ─── Shift+Arrow helpers ──────────────────────────────────────
 
         shiftLeft: shiftLeft {
             compatible = "zmk,behavior-macro";
@@ -320,13 +258,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
+                <&macro_press>,   <&kp LEFT_SHIFT>,
+                <&macro_tap>,     <&kp LEFT>,
+                <&macro_release>, <&kp LEFT_SHIFT>;
             label = "SHIFTLEFT";
         };
 
@@ -336,13 +270,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
+                <&macro_press>,   <&kp LEFT_SHIFT>,
+                <&macro_tap>,     <&kp RIGHT>,
+                <&macro_release>, <&kp LEFT_SHIFT>;
             label = "SHIFTRIGHT";
         };
 
@@ -352,13 +282,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
+                <&macro_press>,   <&kp LEFT_SHIFT>,
+                <&macro_tap>,     <&kp UP_ARROW>,
+                <&macro_release>, <&kp LEFT_SHIFT>;
             label = "SHIFTUP";
         };
 
@@ -368,13 +294,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp DOWN>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
+                <&macro_press>,   <&kp LEFT_SHIFT>,
+                <&macro_tap>,     <&kp DOWN>,
+                <&macro_release>, <&kp LEFT_SHIFT>;
             label = "SHIFTDOWN";
         };
 
@@ -384,13 +306,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_SHIFT &kp UP_ARROW>,
-                <&macro_release>,
-                <&kp RCTRL>;
-
+                <&macro_press>,   <&kp RCTRL>,
+                <&macro_tap>,     <&kp LEFT_SHIFT &kp UP_ARROW>,
+                <&macro_release>, <&kp RCTRL>;
             label = "CTRLSHIFTUP";
         };
 
@@ -400,13 +318,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_SHIFT &kp DOWN_ARROW>,
-                <&macro_release>,
-                <&kp RCTRL>;
-
+                <&macro_press>,   <&kp RCTRL>,
+                <&macro_tap>,     <&kp LEFT_SHIFT &kp DOWN_ARROW>,
+                <&macro_release>, <&kp RCTRL>;
             label = "CTRLSHIFTDOWN";
         };
 
@@ -416,13 +330,9 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_SHIFT &kp LEFT>,
-                <&macro_release>,
-                <&kp RCTRL>;
-
+                <&macro_press>,   <&kp RCTRL>,
+                <&macro_tap>,     <&kp LEFT_SHIFT &kp LEFT>,
+                <&macro_release>, <&kp RCTRL>;
             label = "CTRLSHIFTLEFT";
         };
 
@@ -432,14 +342,250 @@
             tap-ms = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_SHIFT &kp RIGHT>,
-                <&macro_release>,
-                <&kp RCTRL>;
-
+                <&macro_press>,   <&kp RCTRL>,
+                <&macro_tap>,     <&kp LEFT_SHIFT &kp RIGHT>,
+                <&macro_release>, <&kp RCTRL>;
             label = "CTRLSHIFTRIGHT";
+        };
+
+        // ─── Office — Word ────────────────────────────────────────────
+
+        // Ctrl+Alt+V  →  Paste Special
+        paste_special: paste_special {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL &kp LALT>,
+                <&macro_tap>,     <&kp V>,
+                <&macro_release>, <&kp LCTRL &kp LALT>;
+        };
+
+        // Ctrl+Shift+E  →  Track Changes
+        track_chg: track_chg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp E>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
+        };
+
+        // Ctrl+1  →  Single line spacing
+        spacing1: spacing1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp N1>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Ctrl+2  →  Double line spacing
+        spacing2: spacing2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp N2>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // ─── Office — Excel ───────────────────────────────────────────
+
+        // Ctrl+Shift+L  →  Toggle AutoFilter
+        toggle_filter: toggle_filter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp L>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
+        };
+
+        // Alt+=  →  AutoSum
+        autosum: autosum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp EQUAL>,
+                <&macro_release>, <&kp LALT>;
+        };
+
+        // Ctrl+Shift+$  →  Currency format
+        fmt_cur: fmt_cur {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp N4>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
+        };
+
+        // Ctrl+Shift+%  →  Percent format
+        fmt_pct: fmt_pct {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp N5>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
+        };
+
+        // Ctrl+Space  →  Select column
+        sel_col: sel_col {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp SPACE>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // ─── Coding — Visual Studio / VS Code ─────────────────────────
+
+        // Ctrl+K, Ctrl+D  →  Format document
+        fmt_doc: fmt_doc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp K>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp D>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Ctrl+K, Ctrl+C  →  Comment block
+        comment: comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp K>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp C>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Ctrl+K, Ctrl+U  →  Uncomment block
+        uncomment: uncomment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp K>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp U>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Ctrl+R, Ctrl+R  →  Rename symbol
+        rename_sym: rename_sym {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp R>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp R>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Ctrl+M, Ctrl+O  →  Collapse all
+        fold_all: fold_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp M>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp O>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Ctrl+M, Ctrl+P  →  Expand all
+        unfold_all: unfold_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp M>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_press>,   <&kp LCTRL>,
+                <&macro_tap>,     <&kp P>,
+                <&macro_release>, <&kp LCTRL>;
+        };
+
+        // Alt+Up  →  Move line up
+        mv_ln_up: mv_ln_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp UP>,
+                <&macro_release>, <&kp LALT>;
+        };
+
+        // Alt+Down  →  Move line down
+        mv_ln_dn: mv_ln_dn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LALT>,
+                <&macro_tap>,     <&kp DOWN>,
+                <&macro_release>, <&kp LALT>;
+        };
+
+        // Ctrl+Shift+B  →  Build solution
+        build: build {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,   <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,     <&kp B>,
+                <&macro_release>, <&kp LCTRL &kp LSHFT>;
         };
     };
 };
@@ -447,25 +593,18 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        // Characters
-        // Fractions
-        // Operators
     };
 };
 
-// Mod Morphs, Encoder, Tap-Dances
-
 / {
     behaviors {
-        // Mod Morph
-        // RGB
+
+        // ─── RGB Mod-Morphs ───────────────────────────────────────────
 
         rgb_bri_sat_inc: rgb_bri_sat_inc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_BRI>;
-
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
@@ -473,7 +612,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAD>, <&rgb_ug RGB_BRD>;
-
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
@@ -481,7 +619,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUI>, <&rgb_bri_sat_inc>;
-
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
@@ -489,21 +626,19 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_bri_sat_dec>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // System Functions
+        // ─── System Mod-Morphs ────────────────────────────────────────
 
         ret_menu: ret_menu {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RET>, <&kp K_APPLICATION>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Encoder
+        // ─── Encoders ─────────────────────────────────────────────────
 
         rgb_encoder: rgb_encoder {
             compatible = "zmk,behavior-sensor-rotate";
@@ -517,8 +652,9 @@
             bindings = <&tab_left>, <&tab_right>;
         };
 
-        // Tap Dance
+        // ─── Tap-Dances ───────────────────────────────────────────────
 
+        // RGB color cycle
         cc: cc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -606,15 +742,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                    |  6   |  7    |  8    |  9   |   0   | BSPC  |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                    |  Y   |  U    |  I    |  O   |   P   | DEL   |
-            // |LSHFT  |  A  |  S  |  D   |  F   |  G   |                    |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // |RCTRL  |  Z  |  X  |  C   |  V   |  B   |                    |  N   |  M    |  ,    |  .   |   /   | ENTER |
-            // | /     |rscw |GUI† | ALT  | to 1 |SPACE |                    |SPACE | to 2  | LWIN  |  [   |   ]   |
-            //                                                               | RGUI |
+        // ═══════════════════════════════════════════════════════════════
+        // LAYER 0 — DEFAULT (QWERTY)
+        // ═══════════════════════════════════════════════════════════════
+        // | ESC  |  1  |  2  |  3     |  4    |  5   |        |  6   |  7   |  8    |  9  |  0  | BSPC |
+        // | TAB  |  Q  |  W  |  E     |  R    |  T   |        |  Y   |  U   |  I    |  O  |  P  | DEL  |
+        // | LSFT |  A  |  S  |  D     |  F    |  G   |        |  H   |  J   |  K    |  L  |  ;  |  '   |
+        // | RCTL |  Z  |  X  |  C     |  V    |  B   |        |  N   |  M   |  ,    |  .  |  /  | ENT  |
+        // | /    | ALT |PstV |ScrSnip | to 1  | SPC  |        | SPC  | to 2 | LWIN  |  [  |  ]  |
+        //                                                      | RGUI |
+        // Encoder L: Vol±   Encoder R: Tab←/→
 
+        default_layer {
             bindings = <
 &kp ESC         &kp N1        &kp N2       &kp N3           &kp N4  &kp N5     &kp N6     &kp N7  &kp N8        &kp N9            &kp N0             &kp BACKSPACE
 &kp TAB         &kp Q         &kp W        &kp E            &kp R   &kp T      &kp Y      &kp U   &kp I         &kp O             &kp P              &kp DELETE
@@ -623,68 +762,76 @@
 &kp FSLH        &kp LEFT_ALT  &pasteValue  &captureScreen1  &to 1   &kp SPACE  &kp SPACE  &to 2   &kp LEFT_WIN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
                                                                                &kp RGUI
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &tab_browser>;
         };
 
+        // ═══════════════════════════════════════════════════════════════
+        // LAYER 1 — OFFICE  (Word · Excel · PowerPoint)
+        // ═══════════════════════════════════════════════════════════════
+        // | ` /F1|  F2 |  F3 |  F4    |  F5   |  F6  |        | F7   |  7   |  8    |  9  |  *  | BSPC |
+        // | TAB  |PstSp|TrkCh|  ↑     |AutoFm |TogFlt|        | FmtCu|  4   |  5    |  6  |  -  | DEL  |
+        // | LSFT |HOME | ←   |  ↓     |  →    | END  |        | FmtPc|  1   |  2    |  3  |  +  | ENT  |
+        // | SHFT*|PgUp |PgDn |Sp1     |Sp2    |AutoSm| TmMt  || PstV |  0   |  ,    |  .  |  /  | ENT  |
+        // | to0  | ALT |SftL |SftR    | ---   | SPC  |        | SPC  | to 3 | SftUp |SftDn|CtSL |CtSR  |
+        //                                                      | RGUI |
+        // Encoder L: PgUp/Dn   Encoder R: ←cell/→cell (Sh+Tab / Tab)
+
         lower_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |BTCLR* | BT1  | BT2  |  BT3  |  BT4  |  BT5 |               | HUI  |  =  |   /  |   *  |   -  |  EFF |
-            // | BRI+  | PSCR | INS  |   ↑   |   @   |   %  |               | HUD  |  7  |   8  |   9  |   +  |      |
-            // | BRI-  | TOG  |  ←   |   ↓   |   →   |   $  |               | SAI  |  4  |   5  |   6  |   +  | SPI  |
-            // | SHFT* |  OUT |      |  PREV | NEXT  |   #  | PLAY |  |      | SAD  |  1  |   2  |   3  | ENT  | SPD  |
-            //                |      |       |       |      |      |  |      | to 3 |  0  |   0  |   .  |
-
             bindings = <
-&kp GRAVE        &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &rgb_ug RGB_HUI   &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &rgb_ug RGB_EFF
-&rgb_ug RGB_BRI  &kp PSCRN        &kp INS       &kp UP        &kp AT        &kp PRCNT   &rgb_ug RGB_HUD   &kp N7        &kp N8         &kp N9           &kp KP_PLUS   &trans
-&rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &kp LEFT      &kp DOWN      &kp RIGHT     &kp DLLR    &rgb_ug RGB_SAI   &kp N4        &kp N5         &kp N6           &kp KP_PLUS   &rgb_ug RGB_SPI
-&stm             &out OUT_TOG     &trans        &kp C_PREV    &kp C_NEXT    &kp HASH    &kp C_PLAY_PAUSE  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp N2        &kp ENTER
-&kp KP_ENTER     &rgb_ug RGB_SPD  &trans        &trans        &trans        &trans      &trans            &to 3         &kp N0         &kp N0           &kp PERIOD
-                                                                                        &kp DOT
+&kp GRAVE       &kp F2         &kp F3         &kp F4      &kp F5      &kp F6          &kp F7        &kp KP_N7  &kp KP_N8   &kp KP_N9   &kp KP_MULTIPLY  &kp BACKSPACE
+&kp TAB         &paste_special &track_chg     &kp UP      &autosum    &toggle_filter  &fmt_cur      &kp KP_N4  &kp KP_N5   &kp KP_N6   &kp KP_MINUS     &kp DELETE
+&kp LEFT_SHIFT  &kp HOME       &kp LEFT       &kp DOWN    &kp RIGHT   &kp END         &fmt_pct      &kp KP_N1  &kp KP_N2   &kp KP_N3   &kp KP_PLUS      &kp KP_ENTER
+&stm            &kp PG_UP      &kp PG_DN      &spacing1   &spacing2   &autosum        &teams_mute   &pasteValue &kp KP_N0  &kp KP_DOT  &kp KP_DIVIDE    &kp ENTER
+&to 0           &kp LEFT_ALT   &shiftLeft     &shiftRight &trans      &kp SPACE       &kp SPACE     &to 3       &shiftUp    &shiftDown  &ctrlShiftLeft   &ctrlShiftRight
+                                                                                      &kp RGUI
             >;
-
-            sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LS(TAB) TAB>;
         };
 
+        // ═══════════════════════════════════════════════════════════════
+        // LAYER 2 — CODING  (VS / VS Code · Symbols · F-keys)
+        // ═══════════════════════════════════════════════════════════════
+        // |STUDIO| F2  |  F3 |  F4    |  F5   |  F6  |        | F7   |  F8  |  F9   | F10 | F11 | F12  |
+        // | TAB  |  `  |  ~  |  <«    |  >»   |  ?   |        |  *   |  {   |  }    | HOME| END | DEL  |
+        // |FmtDoc|  !  |  @  |  #     |  $    |  %   |        |  _   |  (   |  )    |  ;  |  |  |COLOR |
+        // |Cmt   |UnCmt|RnmSm|FoldAll |UnfAll |  |   |BldSln  |MvLnU |MvLnD |  [    |  ]  |  :  | PWRR |
+        // | to0  | ALT | ≤   | ≥      | MO 3  | CODE |        | ≠    |  ≈   |  ^    |  \  |  &  |
+        //                                                      | RGUI |
+        // Encoder L: RGB hue   Encoder R: PgUp/Dn
+
         raise_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // | STUDIO|  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |       |  `  |  ~  |  <*  |  >*  |  ?   |                   |  *   |  {    |  }    | HOME |  END  |       |
-            // | SCHWA |  !  |  @  |  #   |  $   |  %   |                   |  _   |  (    |  )    |  ;   |   |   | COLOR |
-            // |       |  =  |  -  |  +   |  &   |  |   | RGBTOG|  |        |  ^   |  [    |  ]    |  :   |   \   | POWER |
-            //               |     |      |      | to 0 | CODE  |  |        |      |       |       |      |
-
             bindings = <
-&studio_unlock  &kp F2     &kp F3     &kp F4       &kp F5    &kp F6     &kp F7           &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
-&trans          &kp GRAVE  &kp TILDE  &td_lt       &td_gt    &kp QMARK  &kp ASTRK        &kp LBRC  &kp RBRC   &kp HOME  &kp END   &trans
-&schwa          &kp EXCL   &kp AT     &kp HASH     &kp DLLR  &kp PRCNT  &kp UNDER        &kp LPAR  &kp RPAR   &kp SEMI  &kp PIPE  &cc
-&trans          &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp AMPS  &kp PIPE   &rgb_ug RGB_TOG  &trans    &kp CARET  &kp LBKT  &kp RBKT  &kp COLON
-&kp BSLH        &pwr       &trans     &trans       &to 0     &trans     &pscode          &trans    &trans     &trans    &trans
-                                                                        &trans
+&studio_unlock  &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7           &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
+&kp TAB         &kp GRAVE   &kp TILDE   &td_lt      &td_gt      &kp QMARK   &kp ASTRK        &kp LBRC    &kp RBRC    &kp HOME    &kp END     &kp DELETE
+&fmt_doc        &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp UNDER        &kp LPAR    &kp RPAR    &kp SEMI    &kp PIPE    &cc
+&comment        &uncomment  &rename_sym &fold_all   &unfold_all &kp PIPE    &build           &mv_ln_up   &mv_ln_dn   &kp LBKT    &kp RBKT    &kp COLON
+&to 0           &kp LALT    &less_equ   &gtr_equ    &mo 3       &pscode     &not_equ         &alm_equ    &kp CARET   &kp BSLH    &kp AMPS    &pwr
+                                                                             &kp RGUI
             >;
-
             sensor-bindings = <&rgb_encoder &inc_dec_kp PG_UP PG_DN>;
         };
 
+        // ═══════════════════════════════════════════════════════════════
+        // LAYER 3 — SYSTEM  (RGB · Bluetooth · Power)
+        // ═══════════════════════════════════════════════════════════════
+        // |BT_CLR| BT0 | BT1 |  BT2   |  BT3  | BT4  |        | HUI  |  EFF |  TOG  |     |     | OFF  |
+        // | BRI+ |     |     |        |       |USB/BL|        | HUD  | SAI  |  SAD  |     |     | ON   |
+        // | BRI- |     |     |        |       |      |        | SPI  | SPD  |       |     |     | BRI+ |
+        // | SPI  |     |     |        |       |      | PLAY  || SPD  | COLOR|       |     |     | BRI- |
+        // | to0  |     |     |        |  ---  |      |        |      | to 0 |       |     |     |
+        //                                                      |      |
+        // Encoder L: RGB Hue±   Encoder R: RGB Bri±
+
         extra_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |       |     |     |      |      |      |       |  |        |      |       |       |      |       |       |
-            //               |     |      |      | to 0 |       |  |        |      |       |       |      |
-
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_OFF
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRI
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD
-&trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans
+&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans  &trans  &rgb_ug RGB_OFF
+&rgb_ug RGB_BRI  &trans        &trans        &trans        &trans        &out OUT_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &trans  &trans  &rgb_ug RGB_ON
+&rgb_ug RGB_BRD  &trans        &trans        &trans        &trans        &trans        &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &trans           &trans  &trans  &rgb_ug RGB_BRI
+&rgb_ug RGB_SPI  &trans        &trans        &trans        &trans        &trans        &kp C_PP         &rgb_ug RGB_SPD  &cc              &trans  &trans  &rgb_ug RGB_BRD
+&to 0            &trans        &trans        &trans        &trans        &trans        &trans           &trans           &to 0            &trans  &trans  &pwr
+                                                                                       &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rgb_encoder &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
     };
 };
