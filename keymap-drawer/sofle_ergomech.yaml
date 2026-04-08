@@ -123,7 +123,7 @@ layers:
   - '0'
   - .
   raise:
-  - F1
+  - '&studio_unlock'
   - F2
   - F3
   - F4
